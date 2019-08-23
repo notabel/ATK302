@@ -11,7 +11,7 @@ function draw() {
 
 function setup() {
   // Sets the screen to be 720 pixels wide and 400 pixels high
-  createCanvas(820, 100);
+  createCanvas(820, 900);
   background(0);
   noStroke();
 
