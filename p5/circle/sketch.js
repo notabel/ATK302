@@ -11,7 +11,7 @@ function draw() {
 
 function setup() {
   // Sets the screen to be 720 pixels wide and 400 pixels high
-  createCanvas(720, 400);
+  createCanvas(820, 100);
   background(0);
   noStroke();
 
@@ -25,7 +25,7 @@ function setup() {
   quad(189, 18, 216, 18, 216, 360, 144, 360);
 
   fill(255);
-  ellipse(252, 144, 72, 72);
+  ellipse(222, 144, 72, 72);
 
   fill(204);
   triangle(288, 18, 351, 360, 288, 360);
