@@ -6,7 +6,7 @@ function setup() {
 function draw() {
   // put drawing code here
 
-  rect(mouseX, mouseY, 99, 17) ;
+  ellipse(mouseX, mouseY, 99, 17) ;
 }
 
 function setup() {
@@ -31,5 +31,5 @@ function setup() {
   triangle(288, 18, 351, 360, 288, 360);
 
   fill(255);
-  arc(479, 300, 280, 280, PI, TWO_PI);
+  arc(400, 500, 20, 290, PI, TWO_PI);
 }
