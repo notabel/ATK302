@@ -67,7 +67,7 @@ function setup() {
 function setup() {
   // Sets the screen to be 720 pixels wide and 400 pixels high
   createCanvas(720, 400);
-  background('white');
+  background('#d9e800');
   noStroke();
 //electric background
 
