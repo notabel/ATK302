@@ -64,12 +64,14 @@ function setup() {
   //arc(376, 299, 280, 280, PI, TWO_PI);
 //}
 
-function setup() {
+function draw() {
   // Sets the screen to be 720 pixels wide and 400 pixels high
   createCanvas(720, 400);
   background('#d9e800');
   noStroke();
 //electric background
+if (mouseIsPressed) {
+
 
 fill('yellow');
 triangle(288, 18, 351, 360, 288, 360);
@@ -217,5 +219,54 @@ triangle(1700, 800, 300, 330, 350, 300);
 //mouth
   fill('red')
   arc(356, 220, 30, 30, PI, TWO_PI);
+} else {
+  background('blue');
+  noStroke();
 
+
+// these are the bold outlines of the ghostie uwu
+  fill('black');
+  ellipse(359, 185, 170, 170);
+
+  fill('black');
+  arc(360, 370, 310, 350, PI, TWO_PI);
+
+  fill('black');
+  ellipse(268, 360, 96, 35);
+
+  fill('black');
+  ellipse(452, 360, 96, 35);
+
+  fill('black');
+  ellipse(359, 360, 96, 35);
+
+// these are the actual shapes of the ghostie uwu
+
+  fill('white');
+  ellipse(359, 185, 150, 150);
+
+  fill('white');
+  arc(360, 350, 280, 280, PI, TWO_PI);
+
+  fill('black');
+  ellipse(338, 176, 20, 35);
+
+  fill('black');
+  ellipse(374, 176, 20, 35);
+
+  fill('white');
+  ellipse(268, 352, 96, 35);
+
+  fill('white');
+  ellipse(452, 352, 96, 35);
+
+  fill('white');
+  ellipse(359, 349, 96, 35);
+
+  //fill(204);
+  //triangle(288, 18, 351, 360, 288, 360);
+
+  //fill(255);
+  //arc(376, 299, 280, 280, PI, TWO_PI);
   }
+}
