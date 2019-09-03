@@ -27,8 +27,6 @@ function setup() {
 
   fill(255);
   arc(479, 300, 280, 280, PI, TWO_PI);
-}
 
-function mouseReleased() {
-  console.log(text(mouseX + ',' + mouseY,30,30)) ;
+  text(mouseX + ',' + mouseY,30,30)
 }
