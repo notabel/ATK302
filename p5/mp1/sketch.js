@@ -27,8 +27,7 @@ function setup() {
 
   fill(255);
   arc(479, 300, 280, 280, PI, TWO_PI);
-
-  fill(225) ;
+  fill(255) ;
   text(mouseX + ',' + mouseY,30,30)
 }
 
