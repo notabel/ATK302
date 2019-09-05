@@ -129,6 +129,10 @@ triangle(1700, 800, 300, 330, 350, 300);
 
   fill('black');
   arc(360, 350, 280, 280, PI, TWO_PI);
+
+  fill('black');
+  ellipse(600,600, 200, 200);
+
 //eyes
   fill('red');
   ellipse(338, 176, 20, 35);
@@ -150,6 +154,8 @@ triangle(1700, 800, 300, 330, 350, 300);
 
   fill('black');
   ellipse(359, 349, 96, 35);
+
+
 //angry eyes
   fill('red')
   arc(332, 170, 30, 30, PI, TWO_PI);
@@ -190,6 +196,19 @@ triangle(1700, 800, 300, 330, 350, 300);
   fill('black');
   ellipse(359, 360, 96, 35);
 
+  fill('black');
+  ellipse(358,110,140,40);
+
+  fill('black');
+  rect(315, 50, 90, 70);
+
+  fill('black');
+  rect(220, 205, 35, 80);
+
+  fill('black');
+  ellipse(235, 170, 80, 80)
+
+
 // these are the actual shapes of the ghostie uwu
 
   fill('white');
@@ -213,7 +232,20 @@ triangle(1700, 800, 300, 330, 350, 300);
   fill('white');
   ellipse(359, 349, 96, 35);
 
+  fill('white')
+  ellipse(358,110,120,20)
 
+  fill('white');
+  rect(325,60, 70, 50);
+
+  fill('black');
+  rect(220, 205, 35, 80);
+
+  fill('brown');
+  rect(230, 210, 15, 70);
+
+  fill('lightblue');
+  ellipse(235, 170, 60, 60)
 
   //fill(204);
   //triangle(288, 18, 351, 360, 288, 360);
