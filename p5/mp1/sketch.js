@@ -212,7 +212,7 @@ triangle(1700, 800, 300, 330, 350, 300);
   ellipse(359, 349, 96, 35);
 //angry eyes
   fill('red')
-  arc(330, 170, 30, 30, PI, TWO_PI);
+  arc(332, 170, 30, 30, PI, TWO_PI);
 
   fill('red')
   arc(380, 170, 30, 30, PI, TWO_PI);
