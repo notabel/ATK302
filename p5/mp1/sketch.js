@@ -160,11 +160,13 @@ triangle(1700, 800, 300, 330, 350, 300);
   fill('red')
   arc(356, 220, 30, 30, PI, TWO_PI);
 
-  
+
   textAlign(LEFT);
   fill(0);
-  text('Late at night when the moon is at its highest point, Dr. Ghostie turns into an evil ghost named Mr. Spook. Mr. Spook terrorizes all in his way, shooting electric bolts at anyone and anything in his way. Wrath is his power and rage is his fuel, all the rage of the seemingly calm Dr. Ghostie is released through his alternate personality. Some say if you look Mr. Spook in the eye, you will cry.', 4, 9);
-
+  text('Late at night when the moon is at its highest point, Dr. Ghostie turns into an evil ghost named Mr. Spook.', 4, 10);
+  text('Mr. Spook terrorizes all in his way, shooting electric bolts at anyone and anything in his way.', 4, 30);
+  text('Wrath is his power and rage is his fuel, all the rage of the seemingly calm Dr. Ghostie is released through his alternate personality.', 4, 50);
+  text('Some say if you look Mr. Spook in the eye, you will eventually cry.', 4, 90);
 
 //Late at night when the moon is at its highest point, Dr. Ghostie turns into an evil ghost named Mr. Spook. Mr. Spook terrorizes all in his way, shooting electric bolts at anyone and anything in his way. Wrath is his power and rage is his fuel, all the rage of the seemingly calm Dr. Ghostie is released through his alternate personality. Some say if you look Mr. Spook in the eye, you will cry.
   } else {
