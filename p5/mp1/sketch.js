@@ -160,9 +160,7 @@ triangle(1700, 800, 300, 330, 350, 300);
   fill('red')
   arc(356, 220, 30, 30, PI, TWO_PI);
 
-  fill(0)
-  text('This is Dr. Ghostie. He is a ghost with a PhD in criminal investigation for the dead. Thanks to his deathliness, he can sneak in and out of restricted areas he ventures into when searching for clues and solving a mystery. Unfortunately, he can never solve any of his cases, all for the same reason he cannot remember...', mouseX, mouseY)
-} else {
+  } else {
   background('blue');
   noStroke();
 
@@ -205,6 +203,10 @@ triangle(1700, 800, 300, 330, 350, 300);
 
   fill('white');
   ellipse(359, 349, 96, 35);
+
+  fill(0)
+  text('This is Dr. Ghostie. He is a ghost with a PhD in criminal investigation for the dead. Thanks to his deathliness, he can sneak in and out of restricted areas he ventures into when searching for clues and solving a mystery. Unfortunately, he can never solve any of his cases, all for the same reason he cannot remember...', mouseX, mouseY)
+
 
   //fill(204);
   //triangle(288, 18, 351, 360, 288, 360);
