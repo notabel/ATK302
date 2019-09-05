@@ -130,8 +130,6 @@ triangle(1700, 800, 300, 330, 350, 300);
   fill('black');
   arc(360, 350, 280, 280, PI, TWO_PI);
 
-  fill('black');
-  ellipse(600,600, 200, 200);
 
 //eyes
   fill('red');
@@ -166,6 +164,8 @@ triangle(1700, 800, 300, 330, 350, 300);
   fill('red')
   arc(356, 220, 30, 30, PI, TWO_PI);
 
+  fill('black');
+  ellipse(600,600, 200, 200);
 
   textAlign(LEFT);
   fill(0);
