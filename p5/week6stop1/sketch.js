@@ -1,5 +1,7 @@
 var myState = 0;
 var timer = 200;
+var x = 0;
+var velocity = 5;
 
 
 function setup() {
@@ -25,7 +27,7 @@ function draw() {
       ellipse(width / 2, height / 2 + 125, 100, 100); // bottom
 
       doTimer(1, 200);
-
+      velocity = 5;
       break;
 
     case 1: // yellow state      fill('grey');
@@ -38,7 +40,7 @@ function draw() {
       ellipse(width / 2, height / 2, 100, 100); // middle
 
       doTimer(2, 100);
-
+      velocity = 2;
       break;
 
     case 2: // red state
@@ -50,10 +52,16 @@ function draw() {
       ellipse(width / 2, height / 2 + 125, 100, 100); // bottom
 
       doTimer(0, 50);
-
+      velocity = 0;
       break;
   }
 
+  fill('purple');
+  rect(x, height - 100, 80, 50);
+  x = x + velocity;
+  if (x > width) {
+    x = 0;
+  }
 
 }
 
