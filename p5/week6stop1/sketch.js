@@ -24,7 +24,7 @@ function draw() {
       fill('green');
       ellipse(width / 2, height / 2 + 125, 100, 100); // bottom
 
-      doTimer()
+      doTimer(1);
 
       break;
 
@@ -37,6 +37,8 @@ function draw() {
       fill('yellow');
       ellipse(width / 2, height / 2, 100, 100); // middle
 
+      doTimer(2);
+
       break;
 
     case 2: // red state
@@ -47,16 +49,18 @@ function draw() {
       ellipse(width / 2, height / 2, 100, 100); // middle
       ellipse(width / 2, height / 2 + 125, 100, 100); // bottom
 
+      doTimer(3);
+
       break;
   }
 
 
 }
 
-function doTimer() {
+function doTimer(variableState) {
   timer-- ;
   if (timer <=0) {
     timer = 200 ;
-    myState = 1 ;
+    myState = variableState ;
   }
 }
