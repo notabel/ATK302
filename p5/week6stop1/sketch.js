@@ -24,6 +24,7 @@ function draw() {
       fill('green');
       ellipse(width / 2, height / 2 + 125, 100, 100); // bottom
 
+      doTimer()
 
       break;
 
@@ -50,4 +51,12 @@ function draw() {
   }
 
 
+}
+
+function doTimer() {
+  timer-- ;
+  if (timer <=0) {
+    timer = 200 ;
+    myState = 1 ;
+  }
 }
