@@ -57,10 +57,10 @@ function draw() {
 
 }
 
-function doTimer(variableState) {
+function doTimer(variableState, variableTimer) {
   timer--;
   if (timer <= 0) {
-    timer = 200;
+    timer = variableTimer;
     myState = variableState;
   }
 }
