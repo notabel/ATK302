@@ -37,7 +37,7 @@ function draw() {
       fill('yellow');
       ellipse(width / 2, height / 2, 100, 100); // middle
 
-      doTimer(2, 100);
+      doTimer(2, 200);
 
       break;
 
