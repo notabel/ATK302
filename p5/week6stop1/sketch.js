@@ -24,7 +24,7 @@ function draw() {
       fill('green');
       ellipse(width / 2, height / 2 + 125, 100, 100); // bottom
 
-      doTimer(1);
+      doTimer(1, 100);
 
       break;
 
@@ -37,7 +37,7 @@ function draw() {
       fill('yellow');
       ellipse(width / 2, height / 2, 100, 100); // middle
 
-      doTimer(2);
+      doTimer(2, 100);
 
       break;
 
@@ -49,7 +49,7 @@ function draw() {
       ellipse(width / 2, height / 2, 100, 100); // middle
       ellipse(width / 2, height / 2 + 125, 100, 100); // bottom
 
-      doTimer(3);
+      doTimer(0, 50);
 
       break;
   }
