@@ -1,4 +1,4 @@
-var song1, song2, song3, song4;
+var song1, song2, song3;
 var myState = 0;
 
 
@@ -6,7 +6,6 @@ function preload() {
   song1 = loadSound('assets/badboyinstrumental.mp3');
   song2 = loadSound('assets/trivialoveinstrumental.mp3');
   song3 = loadSound('assets/everydayviviinstrumental.mp3');
-  song4 = loadSound('assets/vividinstrumental.mp3');
 
   // set each song to loop and then immediately pause it so it doesn't play
 
@@ -16,8 +15,6 @@ function preload() {
   song2.stop();
   song3.loop();
   song3.stop();
-  song4.loop();
-  song4.stop();
 
 }
 
@@ -28,7 +25,7 @@ function setup() {
 }
 
 function draw() {
-  background(100);
+  background('grey');
   switch (myState) {
 
     case 0: // trigger the playing, and go immediately to the next state
@@ -61,13 +58,6 @@ function draw() {
     case 5:
       break;
 
-    case 6:
-      song4.play();
-      myState = 7;
-      break;
-
-    case 7:
-      break;
   }
 
 
@@ -80,9 +70,8 @@ function mouseReleased() {
   song1.pause();
   song2.pause();
   song3.pause();
-  song4.pause();
 
-  if (myState > 4) {
+  if (myState > 3) {
     myState = 0;
   }
 }
