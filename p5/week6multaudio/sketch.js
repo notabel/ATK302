@@ -1,4 +1,4 @@
-var song1, song2, song3, song4, song5;
+var song1, song2, song3, song4;
 var myState = 0;
 
 
@@ -6,8 +6,7 @@ function preload() {
   song1 = loadSound('assets/badboyinstrumental.mp3');
   song2 = loadSound('assets/trivialoveinstrumental.mp3');
   song3 = loadSound('assets/everydayviviinstrumental.mp3');
-  song4 = loadSound('assets/favoriteinstrumental.mp3');
-  song5 = loadSound('assets/vividinstrumental.mp3');
+  song4 = loadSound('assets/vividinstrumental.mp3');
 
   // set each song to loop and then immediately pause it so it doesn't play
 
@@ -19,8 +18,6 @@ function preload() {
   song3.stop();
   song4.loop();
   song4.stop();
-  song5.loop();
-  song5.stop();
 
 }
 
@@ -71,14 +68,6 @@ function draw() {
 
     case 7:
       break;
-
-    case 8:
-      song5.play();
-      myState = 9;
-      break;
-
-    case 9:
-      break;
   }
 
 
@@ -92,9 +81,8 @@ function mouseReleased() {
   song2.pause();
   song3.pause();
   song4.pause();
-  song5.pause();
 
-  if (myState > 5) {
+  if (myState > 4) {
     myState = 0;
   }
 }
