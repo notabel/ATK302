@@ -1,4 +1,6 @@
-var song1, song2, song3;
+var song1;
+var song2;
+var song3;
 var myState = 0;
 
 
