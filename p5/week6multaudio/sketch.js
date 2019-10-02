@@ -73,9 +73,10 @@ function mouseReleased() {
   song2.pause();
   song3.pause();
 
-  if (myState > 3) {
+  if (myState > 5) {
     myState = 0;
   }
+
 }
 
 function touchStarted() {
