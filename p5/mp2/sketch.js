@@ -6,9 +6,9 @@ function setup() {
   // put setup code here
   createCanvas(800, 800);
   scenePic = loadImage("assets/sceneone.png");
-  loonaHi = loadImage("assets/loonahihishowcase.png");
-  loonaSelca = loadImage("assets/loonaselca.png");
-  favoriteLoona = loadImage("assets/favoriteloonaimage.png");
+  loonaHi = loadImage("assets/allisonbio.png");
+  loonaSelca = loadImage("assets/oecproject.png");
+  favoriteLoona = loadImage("assets/starrymoth.jpg");
   mic = new p5.AudioIn();
   mic.start();
 }
