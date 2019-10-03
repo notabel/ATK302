@@ -1,6 +1,7 @@
 var myState = 0;
 var myTimer = 0;
 let mic;
+var scenePic, bioBio, oddeyeCircle, starryMoth;
 
 function setup() {
   // put setup code here
