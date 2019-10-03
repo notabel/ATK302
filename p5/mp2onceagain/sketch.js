@@ -33,7 +33,7 @@ function draw() {
       break;
 
     case 1:
-      background(194, 247, 186);
+      background('red');
       image(bioBio, 20, 100);
       myTimer++;
       if (myTimer >= 300) {
@@ -44,7 +44,7 @@ function draw() {
 
 
     case 2:
-      background(189, 223, 255);
+      background('red');
       image(oddeyeCircle, 20, 100);
       myTimer++;
       if (myTimer >= 300) {
@@ -54,7 +54,7 @@ function draw() {
       break;
 
     case 3:
-      background(189, 223, 255);
+      background('red');
       image(starryMoth, 20, 20);
       myTimer++;
       if (myTimer >= 300) {
