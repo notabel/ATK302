@@ -55,7 +55,7 @@ function draw() {
 
     case 3:
       background(189, 223, 255);
-      image(starryMoth, 20, 100);
+      image(starryMoth, 20, 20);
       myTimer++;
       if (myTimer >= 300) {
         myState = 4;
