@@ -5,6 +5,8 @@ let mic;
 function setup() {
   // put setup code here
   createCanvas(800, 800);
+  scenePic = loadImage("assets/sceneone.png");
+
   mic = new p5.AudioIn();
   mic.start();
 }
@@ -15,6 +17,7 @@ function draw() {
   switch (myState) {
     case 0:
       background(255, 161, 161);
+      image(scenePic, 20, 100);
       myTimer++;
       if (myTimer >= 300) {
         myState = 1;
@@ -75,7 +78,7 @@ function draw() {
 
     case 5:
       background(189, 203, 255);
-      
+
       myTimer++;
       if (myTimer >= 700) {
         myState = 0;
