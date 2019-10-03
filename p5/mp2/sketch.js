@@ -6,9 +6,9 @@ function setup() {
   // put setup code here
   createCanvas(800, 800);
   scenePic = loadImage("assets/sceneone.png");
-  loonaHi = loadImage("assets/allisonbio.png");
-  loonaSelca = loadImage("assets/oecproject.png");
-  favoriteLoona = loadImage("assets/starrymoth.jpg");
+  bioBio = loadImage("assets/allisonbio.png");
+  oddeyeCircle = loadImage("assets/oecproject.png");
+  starryMoth = loadImage("assets/starrymoth.jpg");
   mic = new p5.AudioIn();
   mic.start();
 }
@@ -34,7 +34,7 @@ function draw() {
 
     case 1:
       background(194, 247, 186);
-      image(loonaHi, 20, 100);
+      image(bioBio, 20, 100);
       myTimer++;
       if (myTimer >= 300) {
         myState = 2;
@@ -45,7 +45,7 @@ function draw() {
 
     case 2:
       background(189, 223, 255);
-      image(loonaSelca, 20, 100);
+      image(oddeyeCircle, 20, 100);
       myTimer++;
       if (myTimer >= 300) {
         myState = 3;
@@ -55,7 +55,7 @@ function draw() {
 
     case 3:
       background(189, 223, 255);
-      image(favoriteLoona, 20, 100);
+      image(starryMoth, 20, 100);
       myTimer++;
       if (myTimer >= 300) {
         myState = 4;
