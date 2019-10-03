@@ -21,7 +21,8 @@ function draw() {
       background(255, 161, 161);
       image(scenePic, 20, 100);
       fill('white');
-      text("say next when ready");
+      text("say begin when ready", width / 3, height / 3);
+      textSize(20);
       myTimer++;
       if (myTimer >= 300) {
         myState = 1;
@@ -30,12 +31,7 @@ function draw() {
         fill('yellow');
         stroke(0);
 
-        let h = map(vol, 0, .2, height, 0);
-          let c = map(vol, 0 , .2, 0, 500);
-          fill(c) ;
-            background (c, 0 ,0);
-        ellipse(width / 2, h - 25, 50, 200);
-      }
+        }
 
       break;
 
@@ -43,7 +39,7 @@ function draw() {
       background(194, 247, 186);
       image(loonaHi, 20, 100);
       myTimer++;
-      if (myTimer >= 600) {
+      if (myTimer >= 300) {
         myState = 2;
         myTimer = 0;
       }
@@ -54,7 +50,7 @@ function draw() {
       background(189, 223, 255);
       image(loonaSelca, 20, 100);
       myTimer++;
-      if (myTimer >= 400) {
+      if (myTimer >= 300) {
         myState = 3;
         myTimer = 0;
       }
@@ -64,7 +60,7 @@ function draw() {
       background(189, 223, 255);
       image(favoriteLoona, 20, 100);
       myTimer++;
-      if (myTimer >= 400) {
+      if (myTimer >= 300) {
         myState = 4;
         myTimer = 0;
       }
