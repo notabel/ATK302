@@ -6,7 +6,9 @@ function setup() {
   // put setup code here
   createCanvas(800, 800);
   scenePic = loadImage("assets/sceneone.png");
-
+  loonaHi = loadImage("assets/loonahihishowcase.png");
+  loonaSelca = loadImage("assets/loonaselca.png");
+  favoriteLoona = loadImage("assets/favoriteloonaimage.png");
   mic = new p5.AudioIn();
   mic.start();
 }
@@ -37,7 +39,7 @@ function draw() {
 
     case 1:
       background(194, 247, 186);
-
+      image(loonaHi, 20, 100);
       myTimer++;
       if (myTimer >= 600) {
         myState = 2;
@@ -48,7 +50,7 @@ function draw() {
 
     case 2:
       background(189, 223, 255);
-
+      image(loonaSelca, 20, 100);
       myTimer++;
       if (myTimer >= 400) {
         myState = 3;
@@ -58,7 +60,7 @@ function draw() {
 
     case 3:
       background(189, 223, 255);
-
+      image(favoriteLoona, 20, 100);
       myTimer++;
       if (myTimer >= 400) {
         myState = 4;
@@ -68,24 +70,15 @@ function draw() {
 
     case 4:
       background(189, 223, 255);
-
+      image(scenePic, 20, 100);
       myTimer++;
       if (myTimer >= 300) {
-        myState = 5;
-        myTimer = 0;
-      }
-      break;
-
-    case 5:
-      background(189, 203, 255);
-
-      myTimer++;
-      if (myTimer >= 700) {
         myState = 0;
         myTimer = 0;
       }
       break;
 
+    
   }
 
   function touchStarted() {
