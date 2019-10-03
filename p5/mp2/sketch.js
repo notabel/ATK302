@@ -20,16 +20,13 @@ function draw() {
     case 0:
       background(255, 161, 161);
       image(scenePic, 20, 100);
-      fill('white');
+      fill('red');
       text("say begin when ready", width / 3, height / 3);
       textSize(20);
       myTimer++;
       if (myTimer >= 300) {
         myState = 1;
         myTimer = 0;
-        let vol = mic.getLevel();
-        fill('yellow');
-        stroke(0);
 
         }
 
