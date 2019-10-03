@@ -20,6 +20,8 @@ function draw() {
     case 0:
       background(255, 161, 161);
       image(scenePic, 20, 100);
+      fill('white');
+      text("say next when ready");
       myTimer++;
       if (myTimer >= 300) {
         myState = 1;
@@ -78,7 +80,7 @@ function draw() {
       }
       break;
 
-    
+
   }
 
   function touchStarted() {
