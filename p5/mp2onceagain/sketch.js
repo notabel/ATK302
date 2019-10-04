@@ -24,7 +24,7 @@ function draw() {
       fill('red');
       text("say begin when ready", width / 3, height / 3);
       textSize(20);
-      
+
 
       break;
 
@@ -73,8 +73,12 @@ function draw() {
 
   }
 
+  function mouseReleased() {
+    console.log(mouseX + ", " + mouseY);
+  }
+
   function touchStarted() {
-      getAudioContext().resume();
+    getAudioContext().resume();
   }
 
 }
