@@ -36,6 +36,7 @@ function draw() {
     case 1:
       background('red');
       image(bioBio, 20, 100);
+      
       myTimer++;
       if (myTimer >= 300) {
         myState = 2;
