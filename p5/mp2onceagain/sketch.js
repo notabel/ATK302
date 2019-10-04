@@ -19,13 +19,17 @@ function draw() {
 
   switch (myState) {
     case 0:
-      
+    background(255, 161, 161);
+    image(scenePic, 20, 100);
+    fill('red');
+    text("say begin when ready", width / 3, height / 3);
+    textSize(20);
 
 
       break;
 
     case 1:
-      background('red');
+      background('blue');
       image(bioBio, 20, 100);
 
       myTimer++;
@@ -47,7 +51,7 @@ function draw() {
       break;
 
     case 3:
-      background('red');
+      background('yellow');
       image(starryMoth, 20, 20);
       myTimer++;
       if (myTimer >= 300) {
