@@ -24,19 +24,14 @@ function draw() {
       fill('red');
       text("say begin when ready", width / 3, height / 3);
       textSize(20);
-      myTimer++;
-      if (myTimer >= 300) {
-        myState = 1;
-        myTimer = 0;
-
-        }
+      
 
       break;
 
     case 1:
       background('red');
       image(bioBio, 20, 100);
-      
+
       myTimer++;
       if (myTimer >= 300) {
         myState = 2;
