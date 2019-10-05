@@ -70,8 +70,10 @@ function draw() {
 
   }
 
+}
   function mouseReleased() {
     myState += 1;
     if (myState > 4) {
       myState = 0;
     }
+}
