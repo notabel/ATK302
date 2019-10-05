@@ -79,7 +79,7 @@ function draw() {
       myState = 0;
     }
 
-    function touchStarted() {
+  function touchStarted() {
       getAudioContext().resume();
     }
 
