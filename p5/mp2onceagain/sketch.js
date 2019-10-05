@@ -74,7 +74,10 @@ function draw() {
   }
 
   function mouseReleased() {
-    console.log(mouseX + ", " + mouseY);
+    myState += 0;
+    if (myState > 0) {
+      myState = 1;
+    }
   }
 
   function touchStarted() {
