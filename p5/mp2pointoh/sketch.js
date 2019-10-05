@@ -19,7 +19,7 @@ function draw() {
       background(255, 161, 161);
       image(scenePic, 20, 100);
       fill('red');
-      text("left click to begin viewing portfolio and to skip ahead. Slides change on their own", 50, height / 3);
+      text("left click to begin viewing portfolio and to skip ahead. Slides change on their own", 40, height / 3);
       textSize(20);
 
 
