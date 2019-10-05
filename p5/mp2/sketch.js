@@ -28,8 +28,8 @@ function draw() {
     case 1:
       background('blue');
       image(bioBio, 20, 100);
-      fill('');
-      text("", 50, 50);
+      fill('black');
+      text("character sheet for upcoming mystery webcomic", 50, 50);
       textSize(20);
       myTimer++;
       if (myTimer >= 300) {
