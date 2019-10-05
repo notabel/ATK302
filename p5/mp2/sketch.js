@@ -1,6 +1,6 @@
 var myState = 0;
 var myTimer = 0;
-let mic;
+var scenePic, bioBio, oddeyeCircle, starryMoth;
 
 function setup() {
   // put setup code here
@@ -9,8 +9,6 @@ function setup() {
   bioBio = loadImage("assets/allisonbio.png");
   oddeyeCircle = loadImage("assets/oecproject.png");
   starryMoth = loadImage("assets/starrymoth.jpg");
-  mic = new p5.AudioIn();
-  mic.start();
 }
 
 function draw() {
@@ -21,20 +19,18 @@ function draw() {
       background(255, 161, 161);
       image(scenePic, 20, 100);
       fill('red');
-      text("say begin when ready", width / 3, height / 3);
+      text("Left click to begin viewing portfolio and to skip ahead. Slides change on their own", 40, height / 3);
       textSize(20);
-      myTimer++;
-      if (myTimer >= 300) {
-        myState = 1;
-        myTimer = 0;
 
-        }
 
       break;
 
     case 1:
-      background(194, 247, 186);
+      background('blue');
       image(bioBio, 20, 100);
+      fill('');
+      text("", 50, 50);
+      textSize(20);
       myTimer++;
       if (myTimer >= 300) {
         myState = 2;
@@ -44,8 +40,11 @@ function draw() {
 
 
     case 2:
-      background(189, 223, 255);
+      background('red');
       image(oddeyeCircle, 20, 100);
+      fill('white');
+      text("Poster idea for supernatural webcomic", 50, 50);
+      textSize(20);
       myTimer++;
       if (myTimer >= 300) {
         myState = 3;
@@ -54,8 +53,11 @@ function draw() {
       break;
 
     case 3:
-      background(189, 223, 255);
-      image(starryMoth, 20, 100);
+      background('yellow');
+      image(starryMoth, 20, 20);
+      fill('yellow');
+      text("A Van Gogh take on the famous moth meme", 50, 50);
+      textSize(20);
       myTimer++;
       if (myTimer >= 300) {
         myState = 4;
@@ -66,6 +68,9 @@ function draw() {
     case 4:
       background(189, 223, 255);
       image(scenePic, 20, 100);
+      fill('red');
+      text("A scene taken from my upcoming mystery webcomic. The End.", 50, 50);
+      textSize(20);
       myTimer++;
       if (myTimer >= 300) {
         myState = 0;
@@ -76,10 +81,10 @@ function draw() {
 
   }
 
-  function touchStarted() {
-      getAudioContext().resume();
-  }
-
 }
-
-// or myState = (myState + 1) % 3 ;
+  function mouseReleased() {
+    myState += 1;
+    if (myState > 4) {
+      myState = 0;
+    }
+}
