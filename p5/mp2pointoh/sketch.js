@@ -75,5 +75,3 @@ function draw() {
     if (myState > 4) {
       myState = 0;
     }
-// or myState = (myState + 1) % 3 ;
-}
