@@ -19,11 +19,11 @@ function draw() {
 
   switch (myState) {
     case 0:
-    background(255, 161, 161);
-    image(scenePic, 20, 100);
-    fill('red');
-    text("say begin when ready", width / 3, height / 3);
-    textSize(20);
+      background(255, 161, 161);
+      image(scenePic, 20, 100);
+      fill('red');
+      text("say begin when ready", width / 3, height / 3);
+      textSize(20);
 
 
       break;
@@ -79,10 +79,10 @@ function draw() {
       myState = 0;
     }
 
-  function touchStarted() {
-    getAudioContext().resume();
+    function touchStarted() {
+      getAudioContext().resume();
+    }
+
   }
 
-}
-
-// or myState = (myState + 1) % 3 ;
+  // or myState = (myState + 1) % 3 ;
