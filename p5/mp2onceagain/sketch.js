@@ -74,9 +74,9 @@ function draw() {
   }
 
   function mouseReleased() {
-    myState += 0;
-    if (myState > 0) {
-      myState = 1;
+    myState += 1;
+    if (myState > 4) {
+      myState = 0;
     }
   }
 
