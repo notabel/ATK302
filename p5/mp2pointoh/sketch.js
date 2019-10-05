@@ -1,6 +1,5 @@
 var myState = 0;
 var myTimer = 0;
-let mic;
 var scenePic, bioBio, oddeyeCircle, starryMoth;
 
 function setup() {
@@ -10,8 +9,6 @@ function setup() {
   bioBio = loadImage("assets/allisonbio.png");
   oddeyeCircle = loadImage("assets/oecproject.png");
   starryMoth = loadImage("assets/starrymoth.jpg");
-  mic = new p5.AudioIn();
-  mic.start();
 }
 
 function draw() {
@@ -22,7 +19,7 @@ function draw() {
       background(255, 161, 161);
       image(scenePic, 20, 100);
       fill('red');
-      text("say begin when ready", width / 3, height / 3);
+      text("left click when ready", width / 3, height / 3);
       textSize(20);
 
 
@@ -78,12 +75,6 @@ function draw() {
     if (myState > 4) {
       myState = 0;
     }
-
-  function touchStarted() {
-      getAudioContext().resume();
-    }
-
-
 
   // or myState = (myState + 1) % 3 ;
 }
