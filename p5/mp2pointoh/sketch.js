@@ -74,8 +74,10 @@ function draw() {
   }
 
   function mouseReleased() {
-    console.log(mouseX + ", " + mouseY);
-  }
+    myState += 1;
+    if (myState > 1) {
+      myState = 0;
+    }
 
   function touchStarted() {
     getAudioContext().resume();
