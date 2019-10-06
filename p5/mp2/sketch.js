@@ -30,7 +30,7 @@ function draw() {
       image(scenePic, 20, 100);
       fill('red');
       text("Left click to begin viewing portfolio and to skip ahead. Slides change on their own. Speak to make the circle cheer.", 10, height / 3);
-      textSize(15);
+      textSize(12);
 
       break;
 
