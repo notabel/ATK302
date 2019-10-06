@@ -37,6 +37,10 @@ function draw() {
       fill('black');
       text("character sheet for upcoming mystery webcomic", 50, 50);
       textSize(20);
+      let vol = mic.getLevel();
+      let h = map(vol, 0, .1, height, 0);
+      fill('white');
+      ellipse(width /2, height - 1, 50, 50);
       myTimer++;
       if (myTimer >= 300) {
         myState = 2;
@@ -51,6 +55,10 @@ function draw() {
       fill('white');
       text("Poster idea for supernatural webcomic", 50, 50);
       textSize(20);
+      let vol = mic.getLevel();
+      let h = map(vol, 0, .1, height, 0);
+      fill('white');
+      ellipse(width /2, height - 1, 50, 50);
       myTimer++;
       if (myTimer >= 300) {
         myState = 3;
@@ -64,6 +72,10 @@ function draw() {
       fill('yellow');
       text("A Van Gogh take on the famous moth meme", 50, 50);
       textSize(20);
+      let vol = mic.getLevel();
+      let h = map(vol, 0, .1, height, 0);
+      fill('white');
+      ellipse(width /2, height - 1, 50, 50);
       myTimer++;
       if (myTimer >= 300) {
         myState = 4;
@@ -77,6 +89,10 @@ function draw() {
       fill('red');
       text("A scene taken from my upcoming mystery webcomic. The End.", 50, 50);
       textSize(20);
+      let vol = mic.getLevel();
+      let h = map(vol, 0, .1, height, 0);
+      fill('white');
+      ellipse(width /2, height - 1, 50, 50);
       myTimer++;
       if (myTimer >= 300) {
         myState = 0;
