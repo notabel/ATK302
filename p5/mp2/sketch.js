@@ -28,7 +28,7 @@ function draw() {
       fill('yellow');
       stroke(0);
       let h = map(vol, 0, .5, height - 50, 0);
-      let c = map(vol, 0 , .1, 0, 700);
+      let c = map(vol, 0 , .2, 0, 700);
       fill(c) ;
       ellipse(width /2, h, 100, 100);
       fill('red');
