@@ -20,7 +20,7 @@ function draw() {
 
   // Draw an ellipse with height based on volume
   let h = map(vol, 0, .1, height, 0);
-    let c = map(vol, 0 , .1, 0, 500);
+    let c = map(vol, 0 , .1, 0, 600);
     fill(c) ;
       background (c, 0 ,0);
   ellipse(width / 2, h - 25, 50, 200);
