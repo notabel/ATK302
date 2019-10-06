@@ -22,7 +22,7 @@ function draw() {
   let h = map(vol, 0, .1, height, 0);
     //let c = map(vol, 0 , .1, 0, 500);
     //fill(c) ;
-      //background (c, 0 ,0);
+      background (10, 0 ,0);
   ellipse(width / 2, h + 25, 20, 20);
 }
 
