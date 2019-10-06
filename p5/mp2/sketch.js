@@ -1,3 +1,4 @@
+let mic;
 var myState = 0;
 var myTimer = 0;
 var scenePic, bioBio, oddeyeCircle, starryMoth;
@@ -5,6 +6,8 @@ var scenePic, bioBio, oddeyeCircle, starryMoth;
 function setup() {
   // put setup code here
   createCanvas(800, 800);
+  mic = new p5.AudioIn();
+  mic.start();
   scenePic = loadImage("assets/sceneone.png");
   bioBio = loadImage("assets/allisonbio.png");
   oddeyeCircle = loadImage("assets/oecproject.png");
@@ -21,7 +24,10 @@ function draw() {
       fill('red');
       text("Left click to begin viewing portfolio and to skip ahead. Slides change on their own", 40, height / 3);
       textSize(20);
-
+      let vol = mic.getLevel();
+      let h = map(vol, 0, .1, height, 0);
+      fill('white');
+      ellipse(width / 2, h - 25, 50, 200);
 
       break;
 
@@ -87,4 +93,8 @@ function draw() {
     if (myState > 4) {
       myState = 0;
     }
+}
+
+function touchStarted() {
+    getAudioContext().resume();
 }
