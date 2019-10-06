@@ -19,7 +19,7 @@ function draw() {
 
 let vol = mic.getLevel();
 let h = map(vol, 0, .5, height - 50, 0);
-let c = map(vol, 500 , .2, 0, 700);
+let c = map(vol, 0 , .2, 0, 700);
   switch (myState) {
     case 0:
 
