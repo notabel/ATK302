@@ -21,17 +21,18 @@ function draw() {
 
   switch (myState) {
     case 0:
+    let vol = mic.getLevel();
+    fill('yellow');
+    stroke(0);
+    let h = map(vol, 0, .1, height, 0);
+    fill('white');
+    ellipse(width /2, height/2, 100, 100);
       background(255, 161, 161);
       image(scenePic, 20, 100);
       fill('red');
       text("Left click to begin viewing portfolio and to skip ahead. Slides change on their own. Speak to make the circle cheer.", 10, height / 3);
       textSize(13);
-      let vol = mic.getLevel();
-      fill('yellow');
-      stroke(0);
-      let h = map(vol, 0, .1, height, 0);
-      fill('white');
-      ellipse(width /2, height/2, 100, 100);
+
       break;
 
     case 1:
