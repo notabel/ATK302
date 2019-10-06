@@ -45,7 +45,7 @@ let vol = mic.getLevel();
       fill('yellow');
       stroke(0);
 
-      
+
       fill(c) ;
       ellipse(width /2, h, 100, 100);
 
@@ -66,8 +66,7 @@ let vol = mic.getLevel();
 
       fill('yellow');
       stroke(0);
-      let h = map(vol, 0, .5, height - 50, 0);
-      let c = map(vol, 0 , .2, 0, 700);
+
       fill(c) ;
       ellipse(width /2, h, 100, 100);
 
@@ -88,8 +87,7 @@ let vol = mic.getLevel();
 
       fill('yellow');
       stroke(0);
-      let h = map(vol, 0, .5, height - 50, 0);
-      let c = map(vol, 0 , .2, 0, 700);
+
       fill(c) ;
       ellipse(width /2, h, 100, 100);
 
@@ -109,8 +107,7 @@ let vol = mic.getLevel();
 
       fill('yellow');
       stroke(0);
-      let h = map(vol, 0, .5, height - 50, 0);
-      let c = map(vol, 0 , .2, 0, 700);
+      
       fill(c) ;
       ellipse(width /2, h, 100, 100);
 
