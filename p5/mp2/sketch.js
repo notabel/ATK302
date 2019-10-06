@@ -27,7 +27,7 @@ function draw() {
       let vol = mic.getLevel();
       let h = map(vol, 0, .1, height, 0);
       fill('white');
-      ellipse(width /2, 150, 50, 50);
+      ellipse(width /2, height - 1, 50, 50);
 
       break;
 
