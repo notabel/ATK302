@@ -40,6 +40,13 @@ function draw() {
     case 1:
       background('blue');
       image(bioBio, 20, 100);
+      let vol = mic.getLevel();
+      fill('yellow');
+      stroke(0);
+      let h = map(vol, 0, .5, height - 50, 0);
+      let c = map(vol, 0 , .2, 0, 700);
+      fill(c) ;
+      ellipse(width /2, h, 100, 100);
       fill('black');
       text("character sheet for upcoming mystery webcomic", 50, 50);
       textSize(20);
@@ -54,6 +61,13 @@ function draw() {
     case 2:
       background('red');
       image(oddeyeCircle, 20, 100);
+      let vol = mic.getLevel();
+      fill('yellow');
+      stroke(0);
+      let h = map(vol, 0, .5, height - 50, 0);
+      let c = map(vol, 0 , .2, 0, 700);
+      fill(c) ;
+      ellipse(width /2, h, 100, 100);
       fill('white');
       text("Poster idea for supernatural webcomic", 50, 50);
       textSize(20);
@@ -68,6 +82,13 @@ function draw() {
     case 3:
       background('yellow');
       image(starryMoth, 20, 20);
+      let vol = mic.getLevel();
+      fill('yellow');
+      stroke(0);
+      let h = map(vol, 0, .5, height - 50, 0);
+      let c = map(vol, 0 , .2, 0, 700);
+      fill(c) ;
+      ellipse(width /2, h, 100, 100);
       fill('yellow');
       text("A Van Gogh take on the famous moth meme", 50, 50);
       textSize(20);
@@ -81,6 +102,13 @@ function draw() {
     case 4:
       background(189, 223, 255);
       image(scenePic, 20, 100);
+      let vol = mic.getLevel();
+      fill('yellow');
+      stroke(0);
+      let h = map(vol, 0, .5, height - 50, 0);
+      let c = map(vol, 0 , .2, 0, 700);
+      fill(c) ;
+      ellipse(width /2, h, 100, 100);
       fill('red');
       text("A scene taken from my upcoming mystery webcomic. The End.", 50, 50);
       textSize(20);
