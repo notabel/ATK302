@@ -22,7 +22,7 @@ function draw() {
   stroke(0);
   let h = map(vol, 0, .1, height, 0);
   fill('white');
-  ellipse(width /2, height/2, 50, 50);
+  ellipse(width /2, height/2, 100, 100);
 
   switch (myState) {
     case 0:
