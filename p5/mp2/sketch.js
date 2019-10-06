@@ -5,7 +5,7 @@ var scenePic, bioBio, oddeyeCircle, starryMoth;
 
 function setup() {
   // put setup code here
-  createCanvas(800, 800);
+  createCanvas(700, 700);
   mic = new p5.AudioIn();
   mic.start();
   scenePic = loadImage("assets/sceneone.png");
