@@ -28,7 +28,8 @@ function draw() {
       fill('yellow');
       stroke(0);
       let h = map(vol, 0, .5, height - 50, 0);
-      fill('white');
+      let c = map(vol, 0 , .1, 0, 500);
+      fill(c) ;
       ellipse(width /2, h, 100, 100);
       fill('red');
       text("Left click to begin viewing portfolio and to skip ahead. Slides change on their own. Speak to make the circle cheer.", 10, height / 3);
