@@ -1,5 +1,6 @@
 var cars = [];
 var frogPos ;
+var myState;
 
 function setup() {
 
@@ -13,13 +14,39 @@ function setup() {
 }
 
 function draw() {
-  game ();
+  switch(myState) {
+
+case 0:  // splash screen
+fill('blue');
+text("GAME!!!", width / 2, height / 2);
+textSize(30);
+break;
+
+case 1: // the game state
+  game();
+break;
+
+case 2: // the win state
+break;
+
+case 3: // the lose state
+break;
+
+}
+
   }
 
   // draw the frog
   fill('green') ;
   ellipse(frogPos.x, frogPos.y, 60, 60) ;
   checkForKeys() ;
+}
+
+function mouseReleased() {
+  myState++ ;
+  if (myState > 3) {
+    myState = 0;
+  }
 }
 
 // car class!!
