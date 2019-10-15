@@ -59,10 +59,12 @@ function mouseReleased() {
       break;
 
     case 2:
+    resetTheGame ()
       myState = 0;
       break;
 
     case 3:
+    resetTheGame ()
       myState = 0;
       break;
   }
@@ -126,4 +128,12 @@ function game() {
   fill('green');
   ellipse(frogPos.x, frogPos.y, 60, 60);
   checkForKeys();
+}
+
+function resetTheGame () {
+  cars = [] ;
+  for (var i = 0; i < 5; i++) {
+    cars.push(new Car());
+}
+timer = 0;
 }
