@@ -40,9 +40,7 @@ break;
 
   }
 
-  // draw the frog
 
-}
 
 function mouseReleased() {
   myState++ ;
