@@ -1,51 +1,69 @@
 var cars = [];
-var frogPos ;
+var frogPos;
 var myState = 0;
 
 function setup() {
 
   createCanvas(800, 800);
+
+  //spawn cars
   for (var i = 0; i < 40; i++) {
     cars.push(new Car());
   }
-  frogPos = createVector(width/2, height-80) ;
-  rectMode(CENTER) ;
-  ellipseMode(CENTER) ;
+
+
+
+
+  frogPos = createVector(width / 2, height - 80);
+  rectMode(CENTER);
+  ellipseMode(CENTER);
 }
 
 function draw() {
   switch (myState) {
 
-case 0:  // splash screen
-background('white');
-fill('blue');
-text("GAME!!!", width / 2, height / 2);
-textSize(30);
-break;
+    case 0: // splash screen
+      background('white');
+      fill('blue');
+      text("GAME!!!", width / 2, height / 2);
+      textSize(30);
+      break;
 
-case 1: // the game state
-  game();
-break;
+    case 1: // the game state
+      game();
+      timer++;
+      if (timer > 600) {
+        myState = 3;
+        timer = 0;
+      }
+      break;
 
-case 2: // the win state
-background('yellow');
-fill('red');
-text("W I N", width / 2, height / 2);
-break;
+    case 2: // the win state
+      background('yellow');
+      fill('red');
+      text("W I N", width / 2, height / 2);
+      break;
 
-case 3: // the lose state
-break;
-
-}
+    case 3: // the lose state
+      break;
 
   }
 
-
+}
 
 function mouseReleased() {
-  myState++ ;
-  if (myState > 3) {
-    myState = 0;
+  switch (myState) {
+    case 0:
+      myState = 1;
+      break;
+
+    case 2:
+      myState = 0;
+      break;
+
+    case 3:
+      myState = 0;
+      break;
   }
 }
 
@@ -63,8 +81,8 @@ function Car() {
   this.display = function() {
     fill(this.r, this.g, this.b);
     rect(this.pos.x, this.pos.y, 100, 50);
-    ellipse(this.pos.x-45, this.pos.y+25, 50, 50);
-    ellipse(this.pos.x+45, this.pos.y+25, 50, 50);
+    ellipse(this.pos.x - 45, this.pos.y + 25, 50, 50);
+    ellipse(this.pos.x + 45, this.pos.y + 25, 50, 50);
   }
 
   this.drive = function() {
@@ -90,16 +108,16 @@ function checkForKeys() {
 
 function game() {
   background(100);
-for (var i = 0; i < cars.length; i++) {
-  cars[i].display();
-  cars[i].drive();
-  if (cars[i].pos.dist(frogPos) < 50) {
-    cars.splice(i, 1) ;
+  for (var i = 0; i < cars.length; i++) {
+    cars[i].display();
+    cars[i].drive();
+    if (cars[i].pos.dist(frogPos) < 50) {
+      cars.splice(i, 1);
+    }
   }
-}
 
-// draw the frog
-fill('green') ;
-ellipse(frogPos.x, frogPos.y, 60, 60) ;
-checkForKeys() ;
+  // draw the frog
+  fill('green');
+  ellipse(frogPos.x, frogPos.y, 60, 60);
+  checkForKeys();
 }
