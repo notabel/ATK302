@@ -27,6 +27,9 @@ case 1: // the game state
 break;
 
 case 2: // the win state
+background("yellow");
+fill("red");
+text("W I N", width / 2, height / 2);
 break;
 
 case 3: // the lose state
