@@ -7,7 +7,7 @@ function setup() {
   createCanvas(800, 800);
 
   //spawn cars
-  for (var i = 0; i < 40; i++) {
+  for (var i = 0; i < 5; i++) {
     cars.push(new Car());
   }
 
@@ -114,6 +114,11 @@ function game() {
     if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
     }
+
+    if (cars.length == 0) {
+      myState = 2;
+    }
+
   }
 
   // draw the frog
