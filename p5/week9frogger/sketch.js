@@ -13,13 +13,7 @@ function setup() {
 }
 
 function draw() {
-  background(100);
-  for (var i = 0; i < cars.length; i++) {
-    cars[i].display();
-    cars[i].drive();
-    if (cars[i].pos.dist(frogPos) < 50) {
-      cars.splice(i, 1) ;
-    }
+  game ();
   }
 
   // draw the frog
@@ -65,4 +59,20 @@ function checkForKeys() {
   if (keyIsDown(UP_ARROW)) frogPos.y = frogPos.y - 5;
   if (keyIsDown(DOWN_ARROW)) frogPos.y = frogPos.y + 5;
 
+}
+
+function game() {
+  background(100);
+for (var i = 0; i < cars.length; i++) {
+  cars[i].display();
+  cars[i].drive();
+  if (cars[i].pos.dist(frogPos) < 50) {
+    cars.splice(i, 1) ;
+  }
+}
+
+// draw the frog
+fill('green') ;
+ellipse(frogPos.x, frogPos.y, 60, 60) ;
+checkForKeys() ;
 }
