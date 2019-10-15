@@ -1,6 +1,6 @@
 var cars = [];
 var frogPos ;
-var myState;
+myState = 0;
 
 function setup() {
 
@@ -37,7 +37,7 @@ break;
   }
 
   // draw the frog
-  
+
 }
 
 function mouseReleased() {
