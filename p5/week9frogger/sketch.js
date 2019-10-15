@@ -17,6 +17,7 @@ function draw() {
   switch (myState) {
 
 case 0:  // splash screen
+background('white');
 fill('blue');
 text("GAME!!!", width / 2, height / 2);
 textSize(30);
@@ -27,8 +28,8 @@ case 1: // the game state
 break;
 
 case 2: // the win state
-background("yellow");
-fill("red");
+background('yellow');
+fill('red');
 text("W I N", width / 2, height / 2);
 break;
 
