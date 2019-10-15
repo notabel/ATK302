@@ -14,7 +14,7 @@ function setup() {
 }
 
 function draw() {
-  switch(myState) {
+  switch (myState) {
 
 case 0:  // splash screen
 fill('blue');
@@ -37,9 +37,7 @@ break;
   }
 
   // draw the frog
-  fill('green') ;
-  ellipse(frogPos.x, frogPos.y, 60, 60) ;
-  checkForKeys() ;
+  
 }
 
 function mouseReleased() {
