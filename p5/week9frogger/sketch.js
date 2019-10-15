@@ -42,6 +42,8 @@ function Car() {
   this.display = function() {
     fill(this.r, this.g, this.b);
     rect(this.pos.x, this.pos.y, 100, 50);
+    ellipse(this.pos.x, this.pos.y+25, 50, 50);
+    ellipse(this.pos.x, this.pos.y+25, 50, 50);
   }
 
   this.drive = function() {
