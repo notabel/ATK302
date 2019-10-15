@@ -1,6 +1,6 @@
 var cars = [];
 var frogPos ;
-myState = 0;
+var myState = 0;
 
 function setup() {
 
