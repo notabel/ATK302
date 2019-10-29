@@ -27,7 +27,7 @@ function setup() {
 
 frogPos = createVector(width/2, height- 80);
 
-  bunnyImage = loadImage("assets/bunny.jpg");
+  bunnyImage = loadImage("assets/918.png");
   imageMode(CENTER);
   rectMode(CENTER);
 
