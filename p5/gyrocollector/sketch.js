@@ -8,7 +8,7 @@ var x = 0; // acceleration data
 var y = 0;
 var z = 0;
 var cars = [];
-var frogPos ;
+var frogPos;
 
 function setup() {
 
@@ -22,10 +22,10 @@ function setup() {
   for (var i = 0; i < 100; i++) {
     cars.push(new Car());
   }
-  frogPos = createVector(width/2, height- 80);
+  frogPos = createVector(width / 2, height - 80);
 
 
-frogPos = createVector(width/2, height- 80);
+  frogPos = createVector(width / 2, height - 80);
 
   bunnyImage = loadImage("assets/steenky.png");
   imageMode(CENTER);
@@ -53,13 +53,13 @@ function draw() {
   //  	rect(0, 0, 100, 100) ;
   pop();
 
-frogPos.x=xPosition ;
-frogPos.y=yPosition ;
+  frogPos.x = xPosition;
+  frogPos.y = yPosition;
 
   for (var i = 0; i < cars.length; i++) {
     cars[i].display();
     cars[i].drive();
-    if(cars[i].pos.dist(frogPos) < 50) {
+    if (cars[i].pos.dist(frogPos) < 50) {
       cars.splice(i, 1);
     }
   }
@@ -106,7 +106,8 @@ window.addEventListener('devicemotion', function(e) {
   x = e.acceleration.x;
   y = e.acceleration.y;
   z = e.acceleration.z;
-});''
+});
+''
 
 function Car() {
   //atttributes
