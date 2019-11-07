@@ -1,71 +1,51 @@
-var namesArray = [];
+//Dynamically drawn sprites
+//sprite with a custom drawing function follows the mouse
+//and changes shape according to its speed
+
+var stretchy;
+var face;
 
 function setup() {
+  createCanvas(800, 400);
 
-  // Tabletop stuff, for getting google spreadsheet data in.
-  let url = '1GtE3eoYVWBv9zMPoyettXzDCEv6qdNGKio_hgEh5duM'; // this is KEY of the URL from the sheet
-  let settings = {
-    key: url, // The url of the published google sheet
-    callback: gotData, // A callback for when the data comes in
-    simpleSheet: true // This makes things simpler for just a single worksheet of rows
+  face = loadImage('assets/face.png');
+
+  //Sometimes image sequences are not enough and you may want to
+  //use p5's drawing function while retaining the built-in features of the
+  //sprite class
+  stretchy = createSprite(400, 200, 10, 10);
+
+  //To do so you can override (overwrite) the draw() function of the sprite
+  //and make it display anything you want in its current position.
+  //In javascript function and methods can be assigned like variables
+
+  stretchy.draw = function() {
+
+    //the center of the sprite will be point 0,0
+    //"this" in this function will reference the sprite itself
+    fill(237, 205, 0);
+
+    //make the ellipse stretch in the sprite direction
+    //proportionally to its speed
+    push();
+    rotate(radians(this.getDirection()));
+    ellipse(0, 0, 100+this.getSpeed(), 100-this.getSpeed());
+    pop();
+
+    //this.deltaX and this.deltaY are the position increment
+    //since the last frame, move the face image toward the direction
+    image(face, this.deltaX*2, this.deltaY*2);
   };
 
-  Tabletop.init(settings); // Grab the data from the spreadsheet!
-  // End Tabletop initialization stuff
-
-
-  // Regular setup code we usually have
-  createCanvas(600, 600);
-  textAlign(CENTER);
-  ellipseMode(CENTER);
-  rectMode(CENTER);
-
+  stretchy.maxSpeed = 10;
 }
-
-// The data comes back as an array of objects
-// Each object contains all the data for one row of the sheet
-function gotData(data) {
-
-  console.log(data); // Print the data in the console
-
-  // iterate through the array of data and create an object and push it on an array called namesArray
-  for (let i = 0; i < data.length; i++) {
-    namesArray.push(new Circle(data[i].Name, data[i].Shape));
-  }
-
-}
-
 
 function draw() {
-  background('blue');
+  background(255, 255, 255);
 
-  // // iterate through the namesArray and display the objects!
-  for (let i = 0; i < namesArray.length; i++) {
-    namesArray[i].display();
-  }
+  //mouse trailer, the speed is inversely proportional to the mouse distance
+  stretchy.velocity.x = (mouseX-stretchy.position.x)/10;
+  stretchy.velocity.y = (mouseY-stretchy.position.y)/10;
 
-}
-
-
-// my circle class
-function Circle(myName, myShape) {
-  this.pos = createVector(random(width), random(height));
-  this.name = myName;
-  this.shape = myShape;
-
-
-  this.display = function() {
-
- // put an ellipse here
- if(this.shape== "Circle") {
- ellipse(this.pos.x, this.pos.y, 100, 100);
-} else {
-  rect(this.pos.x, this.pos.y, 100, 100);
-}
- text(this.name, this.pos.x, this.pos.y);
-
-
-
-  }
-
+  drawSprites();
 }
