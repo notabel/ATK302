@@ -48,11 +48,11 @@ function draw() {
 
 
 // my circle class
-function Circle(myName, myShape) {
+function Circle(myName, myShape, ) {
   this.pos = createVector(random(width), random(height));
   this.member = myName;
   this.unit = myShape;
-
+  this.
 
   this.display = function() {
 
