@@ -72,7 +72,7 @@ function Circle(myName, myShape, ) {
 
     this.display = function() {
 
-  if {this.unit== "Square") {
+  if (this.unit== "Square") {
     rect(this.pos.x, this.pos.y, 100, 100);
   }
   text(this.member, this.pos.x, this.pos.y);
