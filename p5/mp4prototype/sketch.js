@@ -58,13 +58,23 @@ function Circle(myName, myShape, ) {
  // put an ellipse here
  if(this.unit== "Circle") {
  ellipse(this.pos.x, this.pos.y, 100, 100);
-} else {
-  rect(this.pos.x, this.pos.y, 100, 100);
 }
  text(this.member, this.pos.x, this.pos.y);
 
 
 
   }
+}
+  function Square(myName, myShape, ) {
+    this.pos = createVector(random(width), random(height));
+    this.member = myName;
+    this.unit = myShape;
 
+    this.display = function() {
+
+  if {this.unit== "Square") {
+    rect(this.pos.x, this.pos.y, 100, 100);
+  }
+  text(this.member, this.pos.x, this.pos.y);
+}
 }
