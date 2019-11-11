@@ -49,7 +49,7 @@ function draw() {
 
 // my OneThird class
 function OneThird(myName, myShape) {
-  this.pos = createVector(100, 100;
+  this.pos = createVector(100, 100);
   this.member = myName;
   this.unit = myShape;
 
