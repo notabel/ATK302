@@ -49,7 +49,7 @@ function draw() {
 
 // my OneThird class
 function OneThird(myName, myShape) {
-  this.pos = createVector(random(width), random(height));
+  this.pos = createVector(100, 100;
   this.member = myName;
   this.unit = myShape;
 
@@ -66,7 +66,7 @@ function OneThird(myName, myShape) {
   }
 }
   function OddEyeCircle(myName, myShape, ) {
-    this.pos = createVector(random(width), random(height));
+    this.pos = createVector(200, 200);
     this.member = myName;
     this.unit = myShape;
 
