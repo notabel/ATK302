@@ -15,7 +15,7 @@ function setup() {
 
 
   // Regular setup code we usually have
-  createCanvas(1000, 1000);
+  createCanvas(1000, 600);
   textAlign(CENTER);
   ellipseMode(CENTER);
   rectMode(CENTER);
