@@ -5,9 +5,9 @@
 var stretchy;
 var face;
 
+
 function setup() {
-  createCanvas(800, 400);
-  createSprite(400, 200, 10, 10);
+  createCanvas(windowWidth, windowHeight);
 
   face = loadImage('assets/face.png');
 
