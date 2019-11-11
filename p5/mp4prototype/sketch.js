@@ -65,10 +65,10 @@ function OneThird(myName, myShape) {
 
   }
 }
-  function OddEyeCircle(myName, myShape, ) {
+  function OddEyeCircle(myNameOne, myShapeOne) {
     this.pos = createVector(200, 200);
-    this.member = myName;
-    this.unit = myShape;
+    this.member = myNameOne;
+    this.unit = myShapeOne;
 
     this.display = function() {
 
