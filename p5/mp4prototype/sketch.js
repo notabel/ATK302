@@ -30,7 +30,7 @@ function gotData(data) {
 
   // iterate through the array of data and create an object and push it on an array called namesArray
   for (let i = 0; i < data.length; i++) {
-    namesArray.push(new Circle(data[i].Name, data[i].Shape));
+    namesArray.push(new OneThird(data[i].Name, data[i].Shape));
   }
 
 }
@@ -47,8 +47,8 @@ function draw() {
 }
 
 
-// my circle class
-function Circle(myName, myShape, ) {
+// my OneThird class
+function OneThird(myName, myShape) {
   this.pos = createVector(random(width), random(height));
   this.member = myName;
   this.unit = myShape;
@@ -56,7 +56,7 @@ function Circle(myName, myShape, ) {
   this.display = function() {
 
  // put an ellipse here
- if(this.unit== "Circle") {
+ if(this.unit== "OneThird") {
  ellipse(this.pos.x, this.pos.y, 100, 100);
 }
  text(this.member, this.pos.x, this.pos.y);
@@ -65,14 +65,14 @@ function Circle(myName, myShape, ) {
 
   }
 }
-  function Square(myName, myShape, ) {
+  function OddEyeCircle(myName, myShape, ) {
     this.pos = createVector(random(width), random(height));
     this.member = myName;
     this.unit = myShape;
 
     this.display = function() {
 
-  if (this.unit== "Square") {
+  if (this.unit== "OddEyeCircle") {
     rect(this.pos.x, this.pos.y, 100, 100);
   }
   text(this.member, this.pos.x, this.pos.y);
