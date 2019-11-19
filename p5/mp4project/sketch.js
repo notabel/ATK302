@@ -11,6 +11,6 @@ function draw() {
   //rotateX(radians(rotationX));
   //rotateY(radians(rotationY));
   rect(windowWidth, windowHeight, 300);
-  fill(peppa);
+  fill("yellow");
   ellipse(20,20);
 }
