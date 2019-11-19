@@ -11,7 +11,4 @@ function draw() {
   text("RotationZ", width/2, height/2);
   //rotateX(radians(rotationX));
   //rotateY(radians(rotationY));
-  rect(windowWidth, windowHeight, 300);
-  fill("yellow");
-  ellipse(20,20);
 }
