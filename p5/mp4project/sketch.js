@@ -8,7 +8,7 @@ function setup() {
 function draw() {
   background("white");
   rotateZ(radians(rotationZ));
-  text(RotationZ, width/2, height/2);
+  text(rotationZ, width/2, height/2);
   //rotateX(radians(rotationX));
   //rotateY(radians(rotationY));
 }
