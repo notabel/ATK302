@@ -6,7 +6,7 @@ function setup() {
 }
 
 function draw() {
-  background("blue");
+  background("white");
   rotateZ(radians(rotationZ));
   text("RotationZ", width/2, height/2);
   //rotateX(radians(rotationX));
