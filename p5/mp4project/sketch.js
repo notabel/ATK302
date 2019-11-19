@@ -1,9 +1,12 @@
+var peppa;
+
 function setup() {
   createCanvas(100, 100, WEBGL);
+  peppa = loadImage("assets/pepper.jpg");
 }
 
 function draw() {
-  background(200);
+  background(peppa);
   rotateZ(radians(rotationZ));
   //rotateX(radians(rotationX));
   //rotateY(radians(rotationY));
