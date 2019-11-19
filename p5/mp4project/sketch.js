@@ -1,7 +1,11 @@
 function setup() {
-  // put setup code here
+  createCanvas(100, 100, WEBGL);
 }
 
 function draw() {
-  // put drawing code here
+  background(200);
+  rotateZ(radians(rotationZ));
+  //rotateX(radians(rotationX));
+  //rotateY(radians(rotationY));
+  box(200, 200, 200);
 }
