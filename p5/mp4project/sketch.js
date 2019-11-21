@@ -14,6 +14,7 @@ var trochut;
 function preload() {
   penguin = loadSound("assets/clubpenguin.mp3");
 }
+
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   peppa = loadImage("assets/pepper.jpg");
@@ -44,7 +45,7 @@ function draw() {
 
   pop();
   fill("white");
-  text("communism",rotationZ, width / 2, height / 2);
+  text("communism", rotationZ, width / 2, height / 2);
 
   //rotateX(radians(rotationX));
   //rotateY(radians(rotationY));
@@ -94,6 +95,11 @@ window.addEventListener('deviceorientation', function(e) {
   beta = e.beta;
   gamma = e.gamma;
 });
+
+function mouseReleased() {
+
+  song1.stop();
+}
 
 
 // accelerometer Data
