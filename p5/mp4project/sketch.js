@@ -5,14 +5,20 @@ var x = 0; // acceleration data
 var y = 0;
 var z = 0;
 var frogPos;
+var penguin;
 
 var peppa;
 var trochut;
 
+
+function preload() {
+  penguin = loadSound("assets/clubpenguin.mp3");
+}
 function setup() {
   createCanvas(windowWidth, windowHeight, WEBGL);
   peppa = loadImage("assets/pepper.jpg");
   myF = loadFont("assets/fontss/Trochut-Regular.ttf");
+  penguin.play();
 
   alpha = 0;
   beta = 0;
@@ -34,7 +40,7 @@ function draw() {
   push();
   rotateZ(radians(rotationZ));
   fill("red");
-  box(200, 200, 200);
+  rect(200, 200, 200);
 
   pop();
   fill("white");
@@ -56,7 +62,7 @@ function draw() {
   frogPos.x = xPosition;
   frogPos.y = yPosition;
 
-  
+
 
   // DECORATIONS
   // Just a bunch of text commands to display data coming in from addEventListeners
@@ -76,11 +82,7 @@ function draw() {
   text("z = " + z.toFixed(4), 25, 190);
 
   // MORE DECORATIONS - write that pretty ATK type on top.
-  fill('white');
-  noStroke();
-  textSize(300);
-  textAlign(CENTER);
-  text("atk", width / 2, height / 2);
+
 
 }
 
