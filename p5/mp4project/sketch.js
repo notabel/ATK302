@@ -6,6 +6,7 @@ var y = 0;
 var z = 0;
 var frogPos;
 var penguin;
+var thasOk;
 
 var peppa;
 var trochut;
@@ -13,6 +14,7 @@ var trochut;
 
 function preload() {
   penguin = loadSound("assets/clubpenguin.mp3");
+  thasOk = loadSound("assets/girlfrontremix.mp3");
 }
 
 function setup() {
@@ -20,6 +22,7 @@ function setup() {
   peppa = loadImage("assets/pepper.jpg");
   myF = loadFont("assets/fontss/Trochut-Regular.ttf");
   penguin.play();
+  thasOk.play();
 
   alpha = 0;
   beta = 0;
@@ -96,9 +99,12 @@ window.addEventListener('deviceorientation', function(e) {
   gamma = e.gamma;
 });
 
-function mouseReleased() {
-
-  song1.stop();
+function mouseReleased () {
+  if (penguin.isPlaying()) {
+    penguin.pause() ;
+  } else {
+    thasOk.play() ;
+  }
 }
 
 
