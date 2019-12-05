@@ -27,24 +27,9 @@ function preload() {
 //   createCanvas(windowWidth, windowHeight, WEBGL);
 //   comicsans = loadFont('assets/NotoSansJP-Bold.otf');
 //
-
-  function setup(){
-  tunak.loop();
-  tunak.stop();
-  miku.loop();
-  miku.stop();
-  anthem.loop();
-  anthem.stop();
-christmas.loop();
-christmas.stop();
-  chum.loop();
-  chum.stop();
-  lucky.loop();
-  lucky.stop();
-  caligirls.loop();
-  caligirls.stop();
-//
 }
+
+//
 function pauseTheMusic() {
   jb.pause() ;
   caligirls.pause() ;
@@ -80,10 +65,25 @@ function setup() {
   chum = loadSound('Assets/chumchumbedrum_mixdown.mp3');
   lucky = loadSound('Assets/luckyone.mp3');
 
-  knives.loop();
-  knives.stop();
+  tunak.loop();
+  tunak.stop();
+  miku.loop();
+  miku.stop();
+  anthem.loop();
+  anthem.stop();
+  christmas.loop();
+  christmas.stop();
+  chum.loop();
+  chum.stop();
+  lucky.loop();
+  lucky.stop();
   caligirls.loop();
   caligirls.stop();
+
+  // knives.loop();
+  // knives.stop();
+  // caligirls.loop();
+  // caligirls.stop();
   jb.loop();
   jb.stop();
 
@@ -91,8 +91,8 @@ function setup() {
   // wolf.pause();
   // sigh.loop();
   // sigh.pause();
-  knives.loop();
-  knives.pause();
+  // knives.loop();
+  // knives.pause();
   caligirls.loop();
   caligirls.pause();
   // requestT() ;
