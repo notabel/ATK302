@@ -161,7 +161,7 @@ function draw() {
 
   // The States of Playing Music
 
-  switch myState() {
+  switch (myState) {
     // states for song 1
     case 1: // this is for the first song.
       //north
