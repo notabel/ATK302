@@ -28,6 +28,7 @@ function preload() {
 //   comicsans = loadFont('assets/NotoSansJP-Bold.otf');
 //
 
+  function setup(){
   tunak.loop();
   tunak.stop();
   miku.loop();
