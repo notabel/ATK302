@@ -161,7 +161,7 @@ function draw() {
     case 2:
       // put some pretty images here or something, for song1
       image(mariah, 0, 0, windowWidth, windowHeight);
-      text("playing All I Want For Christmas Is You", 100, 150);
+      text("All I Want For Christmas Is You", 100, 150);
       break;
 
       // states for song 2
@@ -176,7 +176,7 @@ function draw() {
     case 4:
       // pretty stuff to hang out here.
       image(canada, 0, 0, windowWidth, windowHeight);
-      text("playing (French) Canadian Anthem", 100, 150);
+      text("(French) Canadian Anthem", 100, 150);
       break;
 
       // states for song 2
@@ -190,7 +190,7 @@ function draw() {
     case 6:
       // pretty stuff to hang out here.
       image(california, 0, 0, windowWidth, windowHeight);
-      text("playing California Girls", 100, 150);
+      text("California Girls", 100, 150);
       break;
 
       // states for song 2
@@ -204,7 +204,7 @@ function draw() {
     case 8:
       // pretty stuff to hang out here.
       image(despacito, 0, 0, windowWidth, windowHeight);
-      text("playing Despacito", 100, 150);
+      text("Despacito", 100, 150);
       break;
 
       // states for song 2
@@ -219,7 +219,7 @@ function draw() {
     case 10:
       // pretty stuff to hang out here.
       image(bluegrass, 0, 0, windowWidth, windowHeight);
-      text("playing Lucky One", 100, 150);
+      text("Lucky One", 100, 150);
       break;
 
       // states for song 2
@@ -233,7 +233,7 @@ function draw() {
     case 12:
       // pretty stuff to hang out here.
       image(voca, 0, 0, windowWidth, windowHeight);
-      text("playing Ievan Polkka", 100, 150);
+      text("Ievan Polkka", 100, 150);
       break;
 
       // states for song 2
@@ -247,7 +247,7 @@ function draw() {
     case 14:
       // pretty stuff to hang out here.
       image(hindi, 0, 0, windowWidth, windowHeight);
-      text("playing song Tunak Tunak Tun", 100, 150);
+      text("Tunak Tunak Tun", 100, 150);
       break;
 
     case 15:
@@ -260,7 +260,7 @@ function draw() {
     case 16:
       //pretty STUFF
       image(russian, 0, 0, windowWidth, windowHeight);
-      text("playing Chum Drum Bedrum", 100, 150);
+      text("Chum Drum Bedrum", 100, 150);
       break;
   }
 
@@ -269,22 +269,23 @@ function draw() {
   // DECORATIONS
   // Just a bunch of text commands to display data coming in from addEventListeners
   textAlign(LEFT);
-  textSize(20);
+  textSize(40);
   fill('black');
-  text("orientation data:", 25, 25);
+  text("Cursed Musical Carousel", 25, 25);
   textSize(15);
-  text("alpha: " + alpha.toFixed(0), 25, 50);
-  text("beta: " + beta.toFixed(0), 25, 70);
-  text("gamma: " + gamma.toFixed(0), 25, 90);
-  textSize(20);
-  text("acceleration data:", 25, 125);
+  text("To change the song " , 25, 50);
+  text("Move your phone 360 Degrees ", 25, 70);
+  text("Enjoy! ", 25, 90);
+  textSize(40);
+  text("Song Playing: ", 25, 125);
   textSize(15);
 
+// alpha.toFixed(0) to show data
 
-  text("x = " + x.toFixed(0), 25, 150); // .toFixed means just show (x) decimal places
-  text("y = " + y.toFixed(0), 25, 170);
-  text("z = " + z.toFixed(0), 25, 190);
-  text("myState = " + myState, 25, 210);
+  // text("x = " + x.toFixed(0), 25, 150); // .toFixed means just show (x) decimal places
+  // text("y = " + y.toFixed(0), 25, 170);
+  // text("z = " + z.toFixed(0), 25, 190);
+  // text("myState = " + myState, 25, 210);
 
 }
 
