@@ -97,15 +97,18 @@ window.addEventListener('deviceorientation', function(e) {
   alpha = e.alpha;
   beta = e.beta;
   gamma = e.gamma;
-});
 
-function mouseReleased () {
-  if (penguin.isPlaying()) {
-    penguin.pause() ;
-  } else {
-    thasOk.play() ;
+  if (e.alpha > 90) {
+      thasOk.play() ;
+    }
+  if (e.beta > 0) {
+      thasOk.pause();
+      penguin.play();
+    }
   }
-}
+);
+
+
 
 
 // accelerometer Data
