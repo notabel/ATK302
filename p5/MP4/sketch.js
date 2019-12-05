@@ -21,7 +21,7 @@ function preload() {
   // sigh = loadSound('Assets/sigh.mp3');
 
 
-}
+
 //
 // function setup() {
 //   createCanvas(windowWidth, windowHeight, WEBGL);
@@ -43,7 +43,7 @@ christmas.stop();
   caligirls.loop();
   caligirls.stop();
 //
-
+}
 function pauseTheMusic() {
   jb.pause() ;
   caligirls.pause() ;
