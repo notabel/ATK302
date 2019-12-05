@@ -6,21 +6,21 @@ var caligirls, tunak, miku, anthem, jb, christmas, chum, lucky;
 // var sigh;
 
 function preload() {
-  mariah = loadImage('Assets/AIWFCIY.jpg');
-  canada = loadImage('Assets/Can.jpg');
-  russian = loadImage('Assets/CDB.jpg');
-  california = loadImage('Assets/CG.jpg');
-  despacito = loadImage('Assets/D.jpg');
-  bluegrass = loadImage('Assets/TLO.jpg');
-  hindi = loadImage('Assets/TTT.jpg');
-  voca = loadImage('Assets/IP.jpg');
+
   // up = loadImage('assets/OTR.jpg');
   // down = loadImage('assets/KAP.jpg');
 
   // wolf = loadSound('Assets/wolfhowl.mp3');
   // sigh = loadSound('Assets/sigh.mp3');
 
-
+  caligirls = loadSound('Assets/cal.mp3');
+   tunak = loadSound('Assets/tunak_mixdown.mp3');
+  miku = loadSound('Assets/ievanpolkka_mixdown.mp3');
+  anthem = loadSound('Assets/canada_mixdown.mp3');
+  jb = loadSound('Assets/despacito_mixdown.mp3');
+  christmas = loadSound('Assets/Christmas_mixdown.mp3');
+  chum = loadSound('Assets/chumchumbedrum_mixdown.mp3');
+  lucky = loadSound('Assets/luckyone.mp3');
 
 //
 // function setup() {
@@ -32,7 +32,6 @@ function preload() {
 //
 function pauseTheMusic() {
   jb.pause() ;
-  caligirls.pause() ;
   // wolf.pause();
   // sigh.pause();
   caligirls.pause();
@@ -56,46 +55,34 @@ function setup() {
 
   createCanvas(windowWidth, windowHeight);
 
-  caligirls = loadSound('Assets/cal.mp3');
-   tunak = loadSound('Assets/tunak_mixdown.mp3');
-  miku = loadSound('Assets/ievanpolkka_mixdown.mp3');
-  anthem = loadSound('Assets/canada_mixdown.mp3');
-  jb = loadSound('Assets/despacito_mixdown.mp3');
-  christmas = loadSound('Assets/Christmas_mixdown.mp3');
-  chum = loadSound('Assets/chumchumbedrum_mixdown.mp3');
-  lucky = loadSound('Assets/luckyone.mp3');
+  mariah = loadImage('Assets/AIWFCIY.jpg');
+  canada = loadImage('Assets/Can.jpg');
+  russian = loadImage('Assets/CDB.jpg');
+  california = loadImage('Assets/CG.jpg');
+  despacito = loadImage('Assets/D.jpg');
+  bluegrass = loadImage('Assets/TLO.jpg');
+  hindi = loadImage('Assets/TTT.jpg');
+  voca = loadImage('Assets/IP.jpg');
 
   tunak.loop();
-  tunak.stop();
+  tunak.pause();
   miku.loop();
-  miku.stop();
+  miku.pause();
   anthem.loop();
-  anthem.stop();
+  anthem.pause();
   christmas.loop();
-  christmas.stop();
+  christmas.pause();
   chum.loop();
-  chum.stop();
+  chum.pause();
   lucky.loop();
-  lucky.stop();
+  lucky.pause();
   caligirls.loop();
-  caligirls.stop();
+  caligirls.pause();
 
-  // knives.loop();
-  // knives.stop();
-  // caligirls.loop();
-  // caligirls.stop();
   jb.loop();
   jb.stop();
 
-  // wolf.loop();
-  // wolf.pause();
-  // sigh.loop();
-  // sigh.pause();
-  // knives.loop();
-  // knives.pause();
-  caligirls.loop();
-  caligirls.pause();
-  // requestT() ;
+
 
   // initialize accelerometer variables
   alpha = 0;
@@ -109,7 +96,7 @@ function setup() {
 
 function draw() {
 
-  background('red');
+  background('blue');
 
   // alpha is the direction! It starts at 0 when you load the page. If you turn to the left, it goes up,
   // all the way from 1 to 360. If you turn to the right, you'll start at 360 and go down.
@@ -196,13 +183,13 @@ function draw() {
     case 5:
       // song3.play() ;
       pauseTheMusic();
-      california.play();
+      caligirls.play();
       myState = 6;
       break;
 
     case 6:
       // pretty stuff to hang out here.
-      image(caligirls, 0, 0, windowWidth, windowHeight);
+      image(california, 0, 0, windowWidth, windowHeight);
       text("playing California Girls", 100, 150);
       break;
 
